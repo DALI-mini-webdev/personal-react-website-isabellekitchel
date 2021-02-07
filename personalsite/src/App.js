@@ -1,16 +1,18 @@
 import Navbar from "./components/Navbar/Navbar";
 import './App.css';
 import React from 'react';
-import beach from './beach.jpeg'
-import coco from './coco.jpg'
-import me from './me.jpg'
+import beach from './images/beach.jpeg'
+import coco from './images/coco.jpg'
+import me from './images/me.jpg'
 
 
 function App() {
   const name = "Isabelle";
 
-  const buttonFunction = () => {
+  const callbackbuttonFunction = () => {
     console.log("the button was clicked");
+    <h2 className="white-text" id = "pink-background">Welcome to my site!</h2>
+
   } 
 
   const onChangeFunction = (event) => {
@@ -26,13 +28,9 @@ function App() {
 
   return (
     <div className="App">
-      <head>
-        <title>Isabelle Kitchel</title>
-      </head>
       <Navbar />
-      <body>
         <h2 className="white-text" id = "pink-background">About me:</h2>
-        <button id = "pink-background" onClick={buttonFunction}>Hello!</button>
+        <button id = "pink-background" onClick={callbackbuttonFunction}>Hello!</button>
         <p className="blue-text">My name is {name}. I am a '23 at Dartmouth College. I am studying computer science
             and economics.</p>
         <img src={me} height={500} width={375}/>
@@ -46,13 +44,12 @@ function App() {
           <img src={beach} height={500} width={700}/>
         </div>
         <h2 className="white-text" id = "pink-background">Family:</h2>
-        <p className="blue-text">I have two brothers:.</p>
+        <p className="blue-text">I have two brothers:</p>
         <div>{siblingsMap}</div>
         <h2 className="white-text" id = "pink-background">My dog:</h2>
         <img src={coco} height={500} width={400}/>
         <h2 className="white-text" id = "pink-background"> </h2>
         <input type="text" onChange={onChangeFunction}/>
-      </body>
     </div>
   );
 }

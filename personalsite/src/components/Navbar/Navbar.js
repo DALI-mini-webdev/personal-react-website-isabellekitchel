@@ -11,6 +11,14 @@ class Navbar extends Component {
         this.setState({ clicked: !this.state.clicked })
     }
 
+    callbackfunction = () => {
+        this.setState({ clicked: this.state.clicked})
+    }
+
+    allButton = this.state(
+        <h2 className="white-text" id = "pink-background">Phone Number is 610-213-2922</h2>
+    )
+
     render() {
         return(
             <nav className="NavbarItems">
@@ -29,7 +37,7 @@ class Navbar extends Component {
                         )
                     })}
                 </ul>
-                <Button> Sign Up</Button>
+                <Button onClick={this.callbackfunction}> Contact me</Button>
             </nav>
         )
     }
