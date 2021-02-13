@@ -1,4 +1,5 @@
 import Navbar from "./components/Navbar/Navbar";
+import poemAPI from "./components/poemAPI/poemAPI";
 import './App.css';
 import React from 'react';
 import beach from './beach.jpeg'
@@ -52,6 +53,7 @@ function App() {
         <img src={coco} height={500} width={400}/>
         <h2 className="white-text" id = "pink-background"> </h2>
         <input type="text" onChange={onChangeFunction}/>
+        <poemAPI />
       </body>
     </div>
   );
